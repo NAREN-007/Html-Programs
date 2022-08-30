@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="WebStyle.css">
+    <title>Internal Marksheet</title>
+    <style>
+        body{
+            background-image: url(https://salesstar.com/wp-content/uploads/2022/04/Using-sales-tools-to-help-with-sales-recruitment-1024x640.jpg.webp);
+            background-color: lightcoral;
+            margin: 0px;
+
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar background" role="navigation">
+        <ul class="nav-list">
+            <li><div class="logo">
+            <img src="https://sist.sathyabama.ac.in/arc/arc/images/logo.jpg">
+            </div></li>
+            <li><a href="main.html" ><b>HOME</b></a></li>
+            <li><a href="1.html" class="active"><b>INTERNAL MARKS</b></a></li>
+            <li><a href="2.html"><b>EXTERNAL MARKS</b></a></li>
+            <li><a href="aboutme.html"><b>ABOUT ME</b></a></li>
+        </ul>
+    </nav>
+    <div class="marks">
+    <h2>INTERNAL MARKS</h2>
+    <b>
+        <label>IA1:</label><input type="number" name="IA" id="IA1" min="0" max="100" pattern="[0-100]+"><br><br>
+        <label>IA2:</label><input type="number" name="IA" id="IA2" min="0" max="100"><br><br>
+        <label>IA3:</label><input type="number" name="IA" id="IA3" min="0" max="100"><br><br>
+
+        <br><br>
+        <div class="result">
+            <label>Total:</label><span id="tot" style="padding-right:20px ;"></span>
+            <label>Average:</label><span id="avg" style="padding-right:20px;"></span>
+        </div>
+        <br><button onclick="FindTotal()">CALCULATE</button></div>
+        <script type="text/javascript">
+          function FindTotal() {
+            var num1 = parseFloat(document.getElementById("IA1").value);
+            var num2 = parseFloat(document.getElementById("IA2").value);
+            var num3 = parseFloat(document.getElementById("IA3").value);
+            document.getElementById("tot").innerHTML = (num1 + num2 + num3);
+            document.getElementById("avg").innerHTML = (num1 + num2 + num3)/3;
+
+}
+        </script>
+        <footer>
+            <p class="text-footer">Copyright © All rights are reserved </p>
+        </footer>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="WebStyle.css">
+    <title>External Marksheet</title>
+    <style>
+        body{
+        background-image: url(https://wallpaperaccess.com/full/124378.jpg);
+        background-repeat: no-repeat; 
+        background-color: bisque;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar background" role="navigation">
+        <ul class="nav-list">
+            <li><div class="logo">
+            <img src="https://sist.sathyabama.ac.in/arc/arc/images/logo.jpg">
+            </div></li>
+            <li><a href="main.html"><b>HOME</b></a></li>
+            <li><a href="1.html"><b>INTERNAL MARKS</b></a></li>
+            <li><a href="2.html"  class="active"><b>EXTERNAL MARKS</b></a></li>
+            <li><a href="aboutme.html"><b>ABOUT ME</b></a></li>
+        </ul>
+
+    <div class="marks">
+    <h2>SEMESTER END RESULT</h2>
+    <br><br><b>
+    <label>Subject 1 :</label><input type="number" name="Subject" id="qty1" min="0" max="100"><br><br>
+    <label>Subject 2 :</label><input type="number" name="Subject" id="qty2" min="0" max="100"><br><br>
+    <label>Subject 3 :</label><input type="number" name="Subject" id="qty3" min="0" max="100"><br><br>   
+    <label>Subject 4 :</label><input type="number" name="Subject" id="qty4" min="0" max="100"><br><br> 
+    <label>Subject 5 :</label><input type="number" name="Subject" id="qty5" min="0" max="100"><br><br> 
+    <label>Subject 6 :</label><input type="number" name="Subject" id="qty6" min="0" max="100"><br><br> 
+
+    <br><br><div class="result">
+    <label>Total :</label><span id="tot" style="padding-right:20px ;"></span>
+    <label>Percentage :</label><span id="percentage" style="padding-right:20px ;"></span>
+    </div>
+    <br><button onclick="FindTotal()">CALCULATE</button></div>
+    <script type="text/javascript">
+        function FindTotal(){
+            var num1 = parseFloat(document.getElementById("qty1").value);
+            var num2 = parseFloat(document.getElementById("qty2").value);
+            var num3 = parseFloat(document.getElementById("qty3").value);
+            var num4 = parseFloat(document.getElementById("qty4").value);
+            var num5 = parseFloat(document.getElementById("qty5").value);
+            var num6 = parseFloat(document.getElementById("qty6").value);
+            document.getElementById("tot").innerHTML = (num1 + num2 + num3 + num4 + num5 + num6);
+            document.getElementById("percentage").innerHTML = ((num1 + num2 + num3 + num4 + num5 + num6)/600)*100;
+        }
+    </script>
+    <footer>
+        <p class="text-footer">Copyright © All rights are reserved </p>
+    </footer>
+</body>
+</html>
